@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="Polaris-Layout">
+    <div class="Polaris-EmptyState Polaris-EmptyState--withinPage">
+    <div class="Polaris-Layout__AnnotatedSection">
+      <div class="Polaris-Layout__AnnotationWrapper">
+        <div class="Polaris-Layout__Annotation">
+          <div class="Polaris-TextContainer">
+            <h2 class="Polaris-Heading">Contact Us</h2>
+            <div class="Polaris-Layout__AnnotationDescription">
+              <p>Shopify and your customers will use this information to contact you.</p>
+            </div>
+          </div>
+        </div>
+        <div class="Polaris-Layout__AnnotationContent">
+          <form method="post" action="contact_data">
+            {% csrf_token %}
+          <div class="Polaris-Card">
+            <div class="Polaris-Card__Section">
+              <div class="Polaris-FormLayout">
+                <div class="Polaris-FormLayout__Item">
+                  <div>
+                    <!-- Full name -->
+                    <div class="Polaris-Labelled__LabelWrapper">
+                      <div class="Polaris-Label">
+                        <label id="PolarisTextField3Label" for="PolarisTextField3" class="Polaris-Label__Text">Full Name</label>
+                      </div>
+                    </div>
+                    <div class="Polaris-Connected">
+                      <div class="Polaris-Connected__Item Polaris-Connected__Item--primary">
+                        <div class="Polaris-TextField">
+                          <input  id="PolarisTextField3" class="Polaris-TextField__Input" name="name" aria-labelledby="PolarisTextField3Label" aria-invalid="false" aria-multiline="false" value="">
+                          <div class="Polaris-TextField__Backdrop">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="Polaris-FormLayout__Item">
+                  <div>
+                    <div class="Polaris-Labelled__LabelWrapper">
+                      <div class="Polaris-Label">
+                        <label id="PolarisTextField4Label" for="PolarisTextField4" class="Polaris-Label__Text">email</label>
+                      </div>
+                    </div>
+                    <div class="Polaris-Connected">
+                      <div class="Polaris-Connected__Item Polaris-Connected__Item--primary">
+                        <div class="Polaris-TextField"><input id="PolarisTextField4" name="email" class="Polaris-TextField__Input" type="email" aria-labelledby="PolarisTextField4Label" aria-invalid="false" aria-multiline="false" value="">
+                          <div class="Polaris-TextField__Backdrop"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <p>&nbsp;</p>
+                    <div class="Polaris-Labelled__LabelWrapper">
+                      <div class="Polaris-Label">
+                        <label id="PolarisTextField4Label" for="PolarisTextField4" class="Polaris-Label__Text">Subject</label>
+                      </div>
+                    </div>
+                    <div class="Polaris-Connected">
+                      <div class="Polaris-Connected__Item Polaris-Connected__Item--primary">
+                        <div class="Polaris-TextField"><input id="PolarisTextField4" class="Polaris-TextField__Input" name="get_subject" type="text" aria-labelledby="PolarisTextField4Label" aria-invalid="false" aria-multiline="false" value="">
+                          <div class="Polaris-TextField__Backdrop"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <p>&nbsp;</p>
+                    <div class="Polaris-Connected">
+                      <div class="Polaris-Connected__Item Polaris-Connected__Item--primary">
+                        <div class="Polaris-Label">
+                          <label id="PolarisTextField3Label" for="PolarisTextField3" class="Polaris-Label__Text">Message</label>
+                        </div>
+                        <div class="Polaris-TextField">
+                          <textarea id="PolarisTextField10" class="Polaris-TextField__Input" name="get_message" aria-labelledby="PolarisTextField10Label" aria-invalid="false" aria-multiline="true" style="height: 108px;">
+                          </textarea>
+                          <div class="Polaris-TextField__Backdrop"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <p>&nbsp;</p>
+                    <button class="Polaris-Button Polaris-Button--primary" name="contact_submit" type="submit"><span class="Polaris-Button__Content"><span class="Polaris-Button__Text">Submit</span></span></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="PolarisPortalsContainer"></div>
+</div>
+{% endblock %}
